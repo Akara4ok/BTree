@@ -5,9 +5,13 @@
 class BTree
 {
 	int t;
-	Node* root = new Node;
 public:
+	Node* root = nullptr;
 	BTree(int t);
 	BTree(std::string path);
 	void writeToFile(std::string path);
+	void push(std::pair<int, std::string> p);
+	Node* push(std::pair<int, std::string>& p, Node*& subRoot);
+	std::string search(int key);
+	void search(int key, Node* subRoot, std::string& result);
 };

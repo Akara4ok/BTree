@@ -4,16 +4,15 @@
 #include"IOClass.h"
 
 int main(){
-	/*std::vector<std::pair<int, std::string>> data;
-	IOClass io("D:\\tests\\file.txt", 0);
-	int a, b;
-	io.parseNode(a, b, data);
-	std::cout << a << " : " << b << std::endl;
-	for (int i = 0; i < data.size(); i++)
-	{
-		std::cout << data[i].first << " : " << data[i].second << std::endl;
-	}*/
 	BTree b("D:\\tests\\file.txt");
-	b.writeToFile("D:\\tests\\output.txt");
+	std::pair<int, std::string> p;
+	std::cin >> p.first >> p.second;
+	b.push(p);
+	//int n;
+	//std::cin >> n;
+	//std::string s;
+	//b.search(n, b.root, s);
+	//std::cout << b.search(n);
+	b.writeToFile("D:\\tests\\file.txt");
 	return 0;
 }
