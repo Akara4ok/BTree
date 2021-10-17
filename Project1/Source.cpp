@@ -5,9 +5,15 @@
 
 int main(){
 	BTree b("D:\\tests\\file.txt");
-	std::pair<int, std::string> p;
-	std::cin >> p.first >> p.second;
-	b.push(p);
+	//for (int i = 0; i < 17; i++)
+	/*{
+
+		std::cin >> p.first >> p.second;
+		b.push(p);
+	}*/
+	int k;
+	std::cin >> k;
+	b.erase(k);
 	//int n;
 	//std::cin >> n;
 	//std::string s;

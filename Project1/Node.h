@@ -84,5 +84,14 @@ struct Node
 		}
 		return node;
 	}
+	void join(Node* n)
+	{
+		nodes_ptr.back() = n->nodes_ptr[0];
+		for (int i = 1; i < n->nodes_ptr.size(); i++)
+		{
+			nodes_ptr.push_back(n->nodes_ptr[i]);
+			data.push_back(n->data[i - 1]);
+		}
+	}
 };
 
